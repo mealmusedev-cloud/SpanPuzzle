@@ -1,0 +1,170 @@
+/* Matches the app's Classic theme. */
+
+@font-face {
+    font-family: "Fredoka";
+    src: url("fonts/Fredoka.ttf") format("truetype");
+    font-weight: 300 700;
+    font-display: swap;
+}
+
+:root {
+    --background: #F7F3EA;
+    --surface: #FFFCF5;
+    --hairline: #E6DFD1;
+    --ink: #1F1B2E;
+    --body: #5E586B;
+    --accent: #FF6A45;
+    --link: #B23E1E;
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #15131F;
+        --surface: #1F1C2B;
+        --hairline: #2F2B3D;
+        --ink: #F4EFE6;
+        --body: #B3ACC2;
+        --accent: #FF8262;
+        --link: #FF9A7E;
+    }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--body);
+    font-family: "Fredoka", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 22px 64px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+nav .brand {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+    margin-right: auto;
+}
+
+nav a {
+    color: var(--body);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav a:hover, nav a[aria-current="page"] { color: var(--ink); }
+
+h1, h2, h3 { color: var(--ink); line-height: 1.25; }
+h1 { font-size: 2.2rem; margin: 0 0 6px; }
+h2 { font-size: 1.25rem; margin: 34px 0 8px; }
+h3 { font-size: 1.05rem; margin: 22px 0 4px; }
+
+a { color: var(--link); }
+
+.effective { margin-top: 0; font-size: 0.95rem; }
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 26px;
+    padding: 22px 24px;
+    margin: 22px 0;
+}
+
+.hero {
+    text-align: center;
+    padding: 20px 0 10px;
+}
+
+.hero h1 { font-size: 3.4rem; letter-spacing: -1px; }
+
+.hero .threads {
+    display: block;
+    margin: 4px auto 18px;
+}
+
+.hero p { font-size: 1.2rem; margin: 0 auto; max-width: 30em; }
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 26px;
+    border-radius: 22px;
+    background: var(--accent);
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 5px 0 #D84F2E;
+}
+
+.app-icon {
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 18px;
+    border-radius: 28px;
+    box-shadow: 0 12px 30px rgba(31, 27, 46, 0.18);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin: 28px 0;
+}
+
+.features .card { margin: 0; }
+.features h3 { margin-top: 0; }
+.features p { margin-bottom: 0; font-size: 0.98rem; }
+
+.faq details {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 18px;
+    padding: 14px 18px;
+    margin: 10px 0;
+}
+
+.faq summary {
+    color: var(--ink);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faq details p { margin: 10px 0 2px; }
+
+kbd {
+    font-family: inherit;
+    font-size: 0.9em;
+    padding: 1px 7px;
+    border: 1px solid var(--hairline);
+    border-bottom-width: 3px;
+    border-radius: 7px;
+    background: var(--surface);
+    color: var(--ink);
+}
+
+footer {
+    margin-top: 56px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+footer a { color: var(--body); }
