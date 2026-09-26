@@ -9,15 +9,13 @@ The home page, Support page, Privacy Policy, and Terms of Use for Span, ready fo
 | Privacy Policy | `privacy.html` | Privacy Policy URL |
 | Terms of Use | `terms.html` | (Optional) link at the end of the app description |
 
-## Before publishing
+## Details used
 
-Find and replace these placeholders in all four HTML files:
+- Developer: **MealMuse Dev**
+- Contact: **mealmusedev@gmail.com**
+- Governing law: **State of Washington, United States**
 
-- `[DEVELOPER NAME]`
-- `[CONTACT EMAIL]`
-- `[STATE / COUNTRY]` (in `terms.html`)
-
-Make the same changes in `MyApp/Resources/Legal/PrivacyPolicy.md` and `TermsOfUse.md` so the in-app copy matches.
+The in-app copies (`MyApp/Resources/Legal/PrivacyPolicy.md` and `TermsOfUse.md`) use the same details. If you change anything here, change it there too.
 
 ## Publish
 
